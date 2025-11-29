@@ -65,7 +65,7 @@
     .feature-card h3, .install-card h3 { margin: 4px 0 8px; font-size: 18px; color: var(--midnight); }
 
     .testimonial { background: linear-gradient(135deg, rgba(31, 122, 255, 0.14), rgba(15, 155, 80, 0.12)); border-radius: var(--radius); padding: 24px; border: 1px solid rgba(15, 23, 42, 0.1); box-shadow: var(--shadow); position: relative; overflow: hidden; }
-    .testimonial::after { content: "\\201C"; font-size: 120px; color: rgba(255, 255, 255, 0.4); position: absolute; top: -24px; right: 24px; font-family: "Space Grotesk", "Manrope", sans-serif; }
+    .testimonial::after {font-size: 120px; color: rgba(255, 255, 255, 0.4); position: absolute; top: -24px; right: 24px; font-family: "Space Grotesk", "Manrope", sans-serif; }
     blockquote { margin: 0; font-size: 20px; font-style: italic; color: #0f172a; }
     cite { display: block; margin-top: 12px; font-weight: 700; color: var(--midnight); }
 
@@ -162,7 +162,7 @@
         <div class="feature-card">
           <div class="icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
           <h3>Invoicing & Automations</h3>
-          <p>Automate invoicing when orders complete, trigger stock ordering, and log all data/files in the cloud with spreadsheet traces for full auditability.</p>
+          <p>Automate invoicing when orders complete, trigger stock ordering, automate sending emails and more.</p>
           <a class="btn btn-secondary" href="#contact">View details / discuss</a>
         </div>
       </div>
@@ -186,8 +186,12 @@
     <section>
       <h2>Testimonial</h2>
       <div class="testimonial">
-        <blockquote>"After considering upgrading to Sage 200 for quite sometime, I struggled to justify the added benefits with the cost. Streamline came along and did just that with Sage50."</blockquote>
-        <cite>John Doe, Operations Manager</cite>
+        <blockquote>
+          <p style="margin:0 0 10px;">“We nearly upgraded to Sage 200 but couldn’t justify the cost. Streamline unlocked Sage 50 instead—orders hit Stream instantly and autoplan means no more waiting for uploads.”</p>
+          <p style="margin:0 0 10px;">“The custom order form cut email back-and-forth with customers, and any issues get fixed fast.”</p>
+          <p style="margin:0;">“Highly recommend Streamline Integrations to any Sage 50 + Stream operation.”</p>
+        </blockquote>
+        <cite>Dimitri, Managing Director</cite>
       </div>
     </section>
 
