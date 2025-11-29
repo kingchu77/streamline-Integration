@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stock | Sage 50 ↔ Stream</title>
+  <title>Single Stock Location | Sage 50 ↔ Stream</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     :root { --sage:#0f9b50; --stream:#1f7aff; --midnight:#0b1b2b; --ink:#0f172a; --card:rgba(255,255,255,0.9); --shadow:0 18px 45px rgba(12,23,52,0.15); --radius:16px; --max-width:1100px; }
     * { box-sizing: border-box; }
@@ -16,13 +17,11 @@
     .tag { display:inline-flex; padding:8px 14px; background:rgba(15,155,80,0.12); color:var(--sage); border-radius:999px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase; font-size:12px; }
     .hero { max-width:var(--max-width); margin:0 auto; padding:32px 24px 16px; }
     h1 { font-family:"Space Grotesk","Manrope",sans-serif; font-size:clamp(30px,4vw,44px); margin:10px 0; color:var(--midnight); }
-    .panel { background:linear-gradient(135deg,rgba(15,155,80,0.08),rgba(31,122,255,0.08)),#ffffff; border:1px solid rgba(15,23,42,0.08); border-left:4px solid var(--stream); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow); }
     .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
-    .card { background:white; border-radius:var(--radius); padding:18px; border:1px solid rgba(15,23,42,0.08); box-shadow:0 12px 28px rgba(15,23,42,0.08); transition:transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease; }
-    .card:hover { transform:translateY(-4px); box-shadow:0 18px 40px rgba(15,23,42,0.18); border-color:rgba(31,122,255,0.35); }
+    .card { background:white; border-radius:var(--radius); padding:18px; border:1px solid rgba(15,23,42,0.08); box-shadow:0 12px 28px rgba(15,23,42,0.08); transition:transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+    .card:hover { transform:translateY(-6px) translateX(4px) rotate(-0.6deg); box-shadow:0 20px 46px rgba(15,23,42,0.2); border-color:rgba(31,122,255,0.35); }
     .icon { width:42px; height:42px; border-radius:14px; display:inline-flex; align-items:center; justify-content:center; font-weight:800; color:white; background:linear-gradient(145deg,var(--sage),var(--stream)); margin-bottom:10px; }
-    h2 { font-size:26px; margin:24px 0 12px; color:var(--midnight); font-family:"Space Grotesk","Manrope",sans-serif; }
-    h3 { margin:6px 0 8px; color:var(--midnight); }
+    .icon i { font-size:18px; }
     .cta { margin-top:22px; display:flex; gap:10px; flex-wrap:wrap; }
     .btn { display:inline-flex; align-items:center; gap:8px; padding:11px 16px; border-radius:14px; border:none; font-weight:700; cursor:pointer; text-decoration:none; }
     .btn-primary { background:linear-gradient(135deg,var(--sage),var(--stream)); color:white; box-shadow:var(--shadow); }
@@ -32,7 +31,7 @@
 </head>
 <body>
   <header>
-    <div style="font-weight:800; font-family:'Space Grotesk','Manrope',sans-serif; color:var(--midnight);">Stock</div>
+    <div style="font-weight:800; font-family:'Space Grotesk','Manrope',sans-serif; color:var(--midnight);">Single Stock Location</div>
     <nav>
       <a href="landing.html">Back</a>
     </nav>
@@ -40,39 +39,39 @@
 
   <main class="hero">
     <div class="tag">Package</div>
-    <h1>Live Stock that works</h1>
+    <h1>Single Stock Location (Starter)</h1>
     <h2 style="margin-top:0;">Overview</h2>
     <p>Build a live, single or multi-warehouse stock system with Sage 50, Stream, and Zynk automation. Secure APIs move orders between Sage 50 and Stream, and stock movements stay in sync without manual entry.</p>
 
     <h2>What you get</h2>
     <div class="grid">
       <div class="card">
-        <div class="icon">Live</div>
+        <div class="icon"><i class="fa-solid fa-bolt"></i></div>
         <h3>Live stock movements</h3>
         <p>Stock updates automatically as goods move in or out of the warehouse—no rekeying.</p>
       </div>
       <div class="card">
-        <div class="icon">PO</div>
-        <h3>Sage to Stream to Sage POs</h3>
-        <p>Purchase orders raised in Sage are uploaded to Stream. All in one system to log recipet of Purchase Orders.</p>
+        <div class="icon"><i class="fa-solid fa-file-invoice"></i></div>
+        <h3>Stream to Sage POs</h3>
+        <p>Purchase orders raised in Stream are received into Sage 50 automatically.</p>
       </div>
       <div class="card">
-        <div class="icon">GI</div>
-        <h3>Instant stock</h3>
-        <p>Completion sync per item between Stream and Sage 50 automatically.</p>
-      </div>
-      <div class="card">
-        <div class="icon">Auto</div>
-        <h3>Auto-PO placement</h3>
-        <p>Optional automatic placement of purchase orders to keep replenishment flowing.</p>
-      </div>
-      <div class="card">
-        <div class="icon">Alert</div>
+        <div class="icon"><i class="fa-solid fa-bell"></i></div>
         <h3>Stock alerts</h3>
         <p>Scheduled alerts to administrators when levels drop or thresholds hit.</p>
       </div>
       <div class="card">
-        <div class="icon">Save</div>
+        <div class="icon"><i class="fa-solid fa-gear"></i></div>
+        <h3>Auto-PO placement</h3>
+        <p>Optional automatic placement of purchase orders to keep replenishment flowing.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><i class="fa-solid fa-box-open"></i></div>
+        <h3>Goods-In setup</h3>
+        <p>Stream methods for goods-in plus visibility of POs, warehouse actions, and GRNs.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><i class="fa-solid fa-clock"></i></div>
         <h3>Admin time saved</h3>
         <p>Reduce manual updates across Sage and Stream; keep data clean and audit-ready.</p>
       </div>
@@ -81,17 +80,17 @@
     <h2>Multiple warehouse capabilities</h2>
     <div class="grid">
       <div class="card">
-        <div class="icon">Codes</div>
+        <div class="icon"><i class="fa-solid fa-barcode"></i></div>
         <h3>Location-aware product codes</h3>
         <p>Set up Sage 50 product codes by department or site so each warehouse tracks stock cleanly.</p>
       </div>
       <div class="card">
-        <div class="icon">Move</div>
+        <div class="icon"><i class="fa-solid fa-arrow-right-arrow-left"></i></div>
         <h3>Stock transfers</h3>
         <p>Enable controlled stock transfers between warehouses with clear movements recorded in Sage 50.</p>
       </div>
       <div class="card">
-        <div class="icon">Sync</div>
+        <div class="icon"><i class="fa-solid fa-diagram-project"></i></div>
         <h3>Cross-depot accuracy</h3>
         <p>Maintain correct levels even when orders are placed from one depot and fulfilled from another.</p>
       </div>
@@ -104,6 +103,7 @@
 
     <h2 id="contact">Next steps</h2>
     <p>Email: <a href="mailto:matthew.n.77@gmail.com">matthew.n.77@gmail.com</a> &middot; Phone: <a href="tel:+447868258209">+44 7868 258 209</a></p>
+    <p>We can tailor the scope, add logging, or extend to multi-location when you are ready.</p>
   </main>
 
   <footer>

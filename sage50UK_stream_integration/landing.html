@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     :root {
       --sage: #0f9b50;
@@ -60,6 +61,7 @@
     .feature-card, .install-card { background: white; border-radius: var(--radius); padding: 20px; border: 1px solid rgba(15, 23, 42, 0.08); box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08); transition: transform 0.15s ease, box-shadow 0.15s ease; }
     .feature-card:hover, .install-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12); }
     .icon { width: 50px; height: 50px; border-radius: 14px; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; color: white; margin-bottom: 12px; background: linear-gradient(145deg, var(--sage), var(--stream)); }
+    .icon i { font-size: 18px; }
     .feature-card h3, .install-card h3 { margin: 4px 0 8px; font-size: 18px; color: var(--midnight); }
 
     .testimonial { background: linear-gradient(135deg, rgba(31, 122, 255, 0.14), rgba(15, 155, 80, 0.12)); border-radius: var(--radius); padding: 24px; border: 1px solid rgba(15, 23, 42, 0.1); box-shadow: var(--shadow); position: relative; overflow: hidden; }
@@ -97,8 +99,8 @@
   <main id="top">
     <section class="hero">
       <div>
-        <div class="tag">Integrate Sage 50 with Stream</div>
-        <h1>Sage 50 &#8596; Stream Integration</h1>
+        <div class="tag">Sage 50 &#8596; Stream Integration</div>
+        <h1>The Ultimate Sage 50 and Stream Integration</h1>
         <p>Automate secure order uploads and delivery tracking updates between Sage 50 and Stream. Keep stock, logistics and finance in sync and get orders on the road faster.</p>
         <div class="actions">
           <a class="btn btn-primary" href="#contact">Book a demo</a>
@@ -106,18 +108,18 @@
         </div>
       </div>
       <div class="panel">
-        <h3 style="margin-top:0;">3 things Stream + Sage 50 users care about</h3>
+        <h3 style="margin-top:0;">What we solve</h3>
         <ul style="margin:0 0 0 18px; padding:0; color:#0f172a; line-height:1.5;">
-          <li>Orders raised in Sage 50 push straight into Stream via secure API, so routing and planning can start immediately without rekeying.</li>
-          <li>Stream tracking links and delivery confirmations drop back into Sage 50 automatically, keeping customer service and accounts in sync.</li>
-          <li>Any failed uploads are logged clearly, so you see issues fast and keep orders flowing.</li>
+          <li>No need to spend big upgrading to Sage 200.</li>
+          <li>No need for costly third party stock systems</li>
+          <li>Increase efficiency and unlock all the features Stream has to offer.</li>
         </ul>
       </div>
     </section>
 
     <section id="overview">
       <h2>Overview</h2>
-      <p>Integrate Sage 50 with Stream and Zynk to automate the full journey of your sales orders and stock movements. Orders created in Sage 50 are pushed to Stream via a secure API, enabling transport planning without delays. Stream's delivery updates then flow back into Sage 50, so finance and customer service always see the latest status.</p>
+      <p>Integrate Sage 50 with Stream and Zynk to automate the full journey of your sales orders and stock movements. Orders created in Sage 50 are pushed to Stream via the API, enabling transport planning without delays. Stream's delivery updates then flow back into Sage 50, so finance and customer service always see the latest status.</p>
       <p>By combining Sage 50, Stream, and Zynk automation, you cut errors, save time, keep stock levels aligned across locations, and deliver reliable customer updates—without compromising security.</p>
     </section>
 
@@ -125,19 +127,19 @@
       <h2>Packages</h2>
       <div class="grid">
         <div class="feature-card">
-          <div class="icon">API</div>
+          <div class="icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
           <h3>Stream Order Creation via API</h3>
           <p>Create Stream orders via secure API (not WebXL) for deeper customization, fewer errors, and higher speed. Supports weight, cube, and extended attributes to improve auto-planning accuracy.</p>
           <a class="btn btn-secondary" href="stream_order_creation.html">View details</a>
         </div>
         <div class="feature-card">
-          <div class="icon">Stock</div>
+          <div class="icon"><i class="fa-solid fa-boxes-stacked"></i></div>
           <h3>Single Stock Location</h3>
           <p>Live stock as goods move in and out, auto receipt of Stream POs into Sage 50, scheduled stock alerts, and optional auto-PO placement. Includes Stream goods-in methods, visibility of POs/warehouse actions/GRNs, and admin time savings.</p>
           <a class="btn btn-secondary" href="single_stock_location.html">View details</a>
         </div>
         <div class="feature-card">
-          <div class="icon">Pro+</div>
+          <div class="icon"><i class="fa-solid fa-warehouse"></i></div>
           <h3>Multiple Stock Locations</h3>
           <p>Everything in Single Stock plus multi-location product codes by department, stock transfer flows between warehouses, and safeguards to keep stock accurate when ordering from one depot and fulfilling from another.</p>
           <a class="btn btn-secondary" href="#contact">View details / discuss</a>
@@ -146,19 +148,19 @@
 
       <div class="grid" style="margin-top:18px;">
         <div class="feature-card">
-          <div class="icon">Forms</div>
+          <div class="icon"><i class="fa-solid fa-file-pen"></i></div>
           <h3>Custom Order Form</h3>
           <p>Standardize how sales orders enter Sage 50. Use analysis fields for custom info, with a consultation to tailor the form to your process.</p>
           <a class="btn btn-secondary" href="#contact">View details / discuss</a>
         </div>
         <div class="feature-card">
-          <div class="icon">2-Way</div>
+          <div class="icon"><i class="fa-solid fa-right-left"></i></div>
           <h3>2-Way Communication</h3>
           <p>Keep fields aligned when events happen: tracking link into Sage on order create, required date updates, notes sync, and auto emails when SOs import without a customer order number.</p>
           <a class="btn btn-secondary" href="#contact">View details / discuss</a>
         </div>
         <div class="feature-card">
-          <div class="icon">INV</div>
+          <div class="icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
           <h3>Invoicing & Automations</h3>
           <p>Automate invoicing when orders complete, trigger stock ordering, and log all data/files in the cloud with spreadsheet traces for full auditability.</p>
           <a class="btn btn-secondary" href="#contact">View details / discuss</a>
@@ -167,13 +169,13 @@
 
       <div class="grid" style="margin-top:18px;">
         <div class="feature-card">
-          <div class="icon">LOG</div>
+          <div class="icon"><i class="fa-solid fa-clipboard-list"></i></div>
           <h3>Logging</h3>
           <p>Comprehensive logging of data and files to the cloud plus spreadsheet exports for complete traceability.</p>
           <a class="btn btn-secondary" href="#contact">View details / discuss</a>
         </div>
         <div class="feature-card">
-          <div class="icon">MISC</div>
+          <div class="icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
           <h3>Miscellaneous Custom Functions</h3>
           <p>Backdate stock take, update multiple price lists with one product, and many more bespoke functions tailored to your Sage 50 + Stream + Zynk setup.</p>
           <a class="btn btn-secondary" href="#contact">View details / discuss</a>
@@ -193,12 +195,12 @@
       <h2>Installation Options</h2>
       <div class="grid">
         <div class="install-card">
-          <div class="icon">SVC</div>
+          <div class="icon"><i class="fa-solid fa-headset"></i></div>
           <h3>Professional Installation Service</h3>
           <p>White-glove setup where we install and configure the integration on your server for you (&pound;500 + VAT per day). Ideal when you want experts to handle everything end-to-end.</p>
         </div>
         <div class="install-card">
-          <div class="icon">DIY</div>
+          <div class="icon"><i class="fa-solid fa-book"></i></div>
           <h3>DIY Installation Guide</h3>
           <p>Step-by-step manual for your IT team to install and configure the integration. Maintain full control, and switch to assisted installation anytime if you need a hand.</p>
         </div>
