@@ -237,7 +237,7 @@
              Phone: <a href="tel:+447868258209">+44 7868 258 209</a></p>
           <p><a class="btn btn-primary" href="#calendly">Request a demo via Calendly</a></p>
         </div>
-        <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+        <form id="contact-form">
           <div>
             <label for="name">Name</label>
             <input id="name" name="name" type="text" placeholder="Your name">
@@ -246,13 +246,11 @@
             <label for="email">Email</label>
             <input id="email" name="email" type="email" placeholder="you@company.com">
           </div>
-          <div>
-            <label for="message">Project details</label>
-            <textarea id="message" name="message" placeholder="Tell us about your Sage 50 + Stream setup"></textarea>
-          </div>
-          <input type="hidden" name="_redirect" value="https://sage50streamintegration.co.uk/confirmation.html">
-          <input type="hidden" name="_subject" value="New enquiry from sage50streamintegration.co.uk">
-          <button class="btn btn-primary" type="submit">Send Message</button>
+            <div>
+              <label for="message">Project details</label>
+              <textarea id="message" name="message" placeholder="Tell us about your Sage 50 + Stream setup"></textarea>
+            </div>
+          <button class="btn btn-primary" type="button" id="sendMessage">Send Message</button>
         </form>
       </div>
       <div id="calendly" style="margin-top:18px;">
