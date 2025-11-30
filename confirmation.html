@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Booked | Sage 50 ↔ Stream Integration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sage: #0f9b50;
+      --stream: #1f7aff;
+      --midnight: #0b1b2b;
+      --ink: #0f172a;
+      --card: rgba(255, 255, 255, 0.9);
+      --shadow: 0 18px 45px rgba(12, 23, 52, 0.15);
+      --radius: 16px;
+      --max-width: 900px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Manrope","Segoe UI",system-ui,-apple-system,sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at 20% 20%, rgba(31, 122, 255, 0.12), transparent 35%),
+                  radial-gradient(circle at 80% 0%, rgba(15, 155, 80, 0.15), transparent 30%),
+                  #f7f9fc;
+      line-height: 1.6;
+    }
+    header {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    a { color: var(--stream); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .hero {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 48px 24px 32px;
+    }
+    .panel {
+      background: var(--card);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    h1 {
+      font-family: "Space Grotesk","Manrope",sans-serif;
+      font-size: clamp(30px, 4vw, 40px);
+      margin: 10px 0;
+      color: var(--midnight);
+    }
+    h2 { margin: 0 0 12px; color: var(--midnight); }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 14px;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 15px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--sage), var(--stream));
+      color: white;
+      box-shadow: var(--shadow);
+    }
+    .btn-secondary {
+      background: white;
+      color: var(--ink);
+      border: 1px solid rgba(15, 23, 42, 0.12);
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(12, 23, 52, 0.15); }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="font-weight:800; font-family:'Space Grotesk','Manrope',sans-serif; color:var(--midnight);">Sage 50 ↔ Stream Integration</div>
+    <nav>
+      <a href="landing.html">Back to site</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <div class="panel">
+      <h1>Thanks for booking</h1>
+      <p>Your demo is confirmed. You should receive a Calendly confirmation email with the meeting details.</p>
+      <p>If you need to reschedule or share more context (e.g., current Sage 50 setup, Stream workflow, data volumes), reply to the confirmation email or drop a note to <a href="mailto:matthew.n.77@gmail.com">matthew.n.77@gmail.com</a>.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="landing.html#contact">Share project details</a>
+        <a class="btn btn-secondary" href="single_stock_location.html">Review stock package</a>
+        <a class="btn btn-secondary" href="stream_order_creation.html">Review order creation</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
