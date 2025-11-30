@@ -232,27 +232,27 @@
       <h2>Get in Touch</h2>
       <div class="cta-card">
         <div>
-          <p style="margin-top:0;">Ready to see it in action? Contact us for a demo or more information. We will tailor the setup approach—professional service, automated installer, or DIY guidance—to suit your team, with the same secure API foundation across every option.</p>
-          <p>Email: <a href="mailto:matthew.n.77@gmail.com">matthew.n.77@gmail.com</a><br>
-             Phone: <a href="tel:+447868258209">+44 7868 258 209</a></p>
-          <p><a class="btn btn-primary" href="#calendly">Request a demo via Calendly</a></p>
+          <p style="margin-top:0;">Ready to see it in action? Contact us for a demo or more information. From here We'll be able to understand your business and needs better and tailor the approach to suit you.</p>
+            <p>Email: <a href="mailto:matthew@sage50streamintegration.co.uk">matthew@sage50streamintegration.co.uk</a><br>
+               Phone: <a href="tel:+447868258209">+44 7868 258 209</a></p>
+            <p><a class="btn btn-primary" href="#calendly">Request a demo via Calendly</a></p>
+          </div>
+          <form id="contact-form">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name">
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@company.com">
+            </div>
+            <div>
+              <label for="message">Project details</label>
+              <textarea id="message" name="message" placeholder="Tell us about your Sage 50 + Stream setup"></textarea>
+            </div>
+            <button class="btn btn-primary" type="button" id="sendMessage">Send Message</button>
+          </form>
         </div>
-        <form>
-          <div>
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" placeholder="Your name">
-          </div>
-          <div>
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@company.com">
-          </div>
-          <div>
-            <label for="message">Project details</label>
-            <textarea id="message" name="message" placeholder="Tell us about your Sage 50 + Stream setup"></textarea>
-          </div>
-          <button class="btn btn-primary" type="submit">Request a demo</button>
-        </form>
-      </div>
       <div id="calendly" style="margin-top:18px;">
         <!-- Calendly inline widget begin -->
         <div class="calendly-inline-widget" data-url="https://calendly.com/matthew-sage50streamintegration/30min?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
@@ -273,5 +273,19 @@
       <div>&copy; 2025 Streamlined Integrations Ltd. All rights reserved.</div>
     </div>
   </footer>
+  <script>
+    (function() {
+      const btn = document.getElementById('sendMessage');
+      if (!btn) return;
+      btn.addEventListener('click', function() {
+        const name = (document.getElementById('name')?.value || '').trim() || 'Not provided';
+        const email = (document.getElementById('email')?.value || '').trim() || 'Not provided';
+        const message = (document.getElementById('message')?.value || '').trim() || 'Not provided';
+        const subject = encodeURIComponent(`New enquiry from ${name}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+        window.location.href = `mailto:matthew@sage50streamintegration.co.uk?subject=${subject}&body=${body}`;
+      });
+    })();
+  </script>
 </body>
 </html>
