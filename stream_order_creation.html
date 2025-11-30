@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stream Order Creation | Sage 50 ↔ Stream</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root { --sage:#0f9b50; --stream:#1f7aff; --midnight:#0b1b2b; --ink:#0f172a; --card:rgba(255,255,255,0.9); --shadow:0 18px 45px rgba(12,23,52,0.15); --radius:16px; --max-width:1100px; }
+    *{box-sizing:border-box;} body{margin:0;font-family:"Manrope","Segoe UI",sans-serif;color:var(--ink);background:radial-gradient(circle at 20% 20%,rgba(31,122,255,0.12),transparent 35%),radial-gradient(circle at 80% 0%,rgba(15,155,80,0.15),transparent 30%),linear-gradient(135deg,#f8fbff,#eef3ff);line-height:1.6;}
+    header{max-width:var(--max-width);margin:0 auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;}
+    a{color:var(--stream);text-decoration:none;}
+    .tag{display:inline-flex;padding:8px 14px;background:rgba(31,122,255,0.12);color:var(--stream);border-radius:999px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;font-size:12px;}
+    .hero{max-width:var(--max-width);margin:0 auto;padding:32px 24px 16px;}
+    h1{font-family:"Space Grotesk","Manrope",sans-serif;font-size:clamp(30px,4vw,44px);margin:10px 0;color:var(--midnight);} h2{font-size:26px;margin:24px 0 12px;color:var(--midnight);font-family:"Space Grotesk","Manrope",sans-serif;} h3{margin:6px 0 8px;color:var(--midnight);} p{margin:0 0 10px;}
+    .panel{background:linear-gradient(135deg,rgba(15,155,80,0.08),rgba(31,122,255,0.08)),#ffffff;border:1px solid rgba(15,23,42,0.08);border-left:4px solid var(--stream);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);} 
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
+    .card{background:white;border-radius:var(--radius);padding:18px;border:1px solid rgba(15,23,42,0.08);box-shadow:0 12px 28px rgba(15,23,42,0.08);transition:transform 0.2s ease,box-shadow 0.2s ease,border-color 0.2s ease;}
+    .card:hover{transform:translateY(-6px) translateX(4px) rotate(-0.6deg);box-shadow:0 20px 46px rgba(15,23,42,0.2);border-color:rgba(31,122,255,0.35);} 
+    .icon{width:42px;height:42px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;font-weight:800;color:white;background:linear-gradient(145deg,var(--sage),var(--stream));margin-bottom:10px;}
+    .icon i{font-size:18px;}
+    .cta{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap;}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border-radius:14px;border:none;font-weight:700;cursor:pointer;text-decoration:none;}
+    .btn-primary{background:linear-gradient(135deg,var(--sage),var(--stream));color:white;box-shadow:var(--shadow);} .btn-secondary{background:white;color:var(--ink);border:1px solid rgba(15,23,42,0.12);} 
+    footer{background:#0b1b2b;color:#e2e8f0;padding:28px 24px;margin-top:32px;}
+    footer a{color:#e2e8f0;text-decoration:none;}
+    footer a:hover{text-decoration:underline;}
+    .footer-inner{max-width:var(--max-width);margin:0 auto;display:grid;gap:12px;text-align:left;}
+    .footer-links{display:flex;flex-direction:column;gap:8px;align-items:flex-start;}
+  </style>
+</head>
+<body>
+  <header>
+    <div style="font-weight:800; font-family:'Space Grotesk','Manrope',sans-serif; color:var(--midnight);">Order Upload via Stream API</div>
+    <nav><a href="landing.html">Back</a></nav>
+  </header>
+
+  <main class="hero">
+    <div class="tag">Package</div>
+    <h1>Order Upload via Stream API</h1>
+    <h2 style="margin-top:0;">Overview</h2>
+    <p>Create Stream orders through the secure API (not WebXL) for greater customization, fewer errors, and faster throughput. Weight, cube, and extended attributes are supported to improve auto-planning accuracy.</p>
+
+    <h2>Features</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+        <h3>Order upload to Stream</h3>
+        <p>Orders created in Sage 50 automatically flow into Stream's TMS over secure API calls so planning can start immediately.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><i class="fa-solid fa-right-left"></i></div>
+        <h3>Automatic tracking updates</h3>
+        <p>Stream pushes tracking numbers and delivery confirmations back into Sage 50, keeping accounts and customer service in sync with live shipment status.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><i class="fa-solid fa-clipboard-list"></i></div>
+        <h3>Error logging</h3>
+        <p>Failed uploads - such as missing data - are logged for instant visibility, so issues can be reviewed and resolved without guesswork.</p>
+      </div>
+    </div>
+
+    <h2>Process</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">1</div>
+        <h3>Export sales orders from Sage 50</h3>
+        <p>New sales orders are exported from Sage 50 and queued for transfer to Stream, ready for logistics planning.</p>
+      </div>
+      <div class="card">
+        <div class="icon">2</div>
+        <h3>Upload to Stream via API</h3>
+        <p>Orders are sent to Stream's API using your preferred field mappings over a secure connection, fitting your Stream setup without exposing sensitive data.</p>
+      </div>
+      <div class="card">
+        <div class="icon">3</div>
+        <h3>Update Sage 50 with tracking</h3>
+        <p>Once uploaded, the Sage 50 sales order is updated with the Stream response - tracking link, consignment number, and tracking ID - so status stays in sync.</p>
+      </div>
+    </div>
+
+    <div class="cta">
+      <a class="btn btn-primary" href="landing.html#contact">Request a demo</a>
+      <a class="btn btn-secondary" href="single_stock_location.html">See stock package</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="landing.html#top">Home</a>
+        <a href="stream_order_creation.html">Order Creation</a>
+        <a href="single_stock_location.html">Stock Package</a>
+        <a href="landing.html#contact">Contact</a>
+      </div>
+      <div>&copy; 2025 Streamlined Integrations Ltd.</div>
+    </div>
+  </footer>
+</body>
+</html>
