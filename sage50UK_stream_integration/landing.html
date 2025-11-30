@@ -74,7 +74,11 @@
     label { font-weight: 600; color: var(--midnight); }
     input, textarea { width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(15, 23, 42, 0.16); font: inherit; background: white; }
     textarea { min-height: 110px; resize: vertical; }
-    footer { max-width: var(--max-width); margin: 0 auto; padding: 24px; text-align: center; color: #334155; font-size: 14px; }
+    footer { background:#0b1b2b; color:#e2e8f0; padding:28px 24px; margin-top:32px; }
+    footer a { color:#e2e8f0; text-decoration:none; }
+    footer a:hover { text-decoration:underline; }
+    .footer-inner { max-width: var(--max-width); margin:0 auto; display:grid; gap:12px; text-align:left; }
+    .footer-links { display:flex; flex-direction:column; gap:8px; align-items:flex-start; }
     @media (max-width: 700px) { .nav { flex-direction: column; align-items: flex-start; } header { position: static; } }
   </style>
 </head>
@@ -136,7 +140,7 @@
         <div class="feature-card">
           <div class="icon"><i class="fa-solid fa-boxes-stacked"></i></div>
           <h3>Single Stock Location</h3>
-          <p>Live stock as goods move in and out, auto receipt of Stream POs into Sage 50, scheduled stock alerts, and optional auto-PO placement. Includes Stream goods-in methods, visibility of POs/warehouse actions/GRNs, and admin time savings.</p>
+          <p>Live stock as goods move in and out on Sage, PO's uploaded and completed on Stream to keep track of Goods-In, scheduled stock alerts, and optional auto-PO placementand admin time savings.</p>
           <a class="btn btn-secondary" href="single_stock_location.html">View details</a>
         </div>
         <div class="feature-card">
@@ -187,17 +191,24 @@
       <h2>Testimonials</h2>
       <div class="testimonial" style="margin-bottom:16px;">
         <blockquote>
-          <p style="margin:0 0 10px;">“We nearly upgraded to Sage 200 but couldn't justify the cost. Streamline unlocked Sage 50 instead—orders hit Stream instantly and autoplan means no more waiting for uploads.”</p>
+          <p style="margin:0 0 10px;">“We nearly upgraded to Sage 200 but couldn't justify the cost. Streamline unlocked Sage 50 instead, orders hit Stream instantly and being able to use autoplan properly really saves times with routing.”</p>
           <p style="margin:0;">“Highly recommend Streamline Integrations to any Sage 50 + Stream operation.”</p>
         </blockquote>
         <cite>Dimitri, Managing Director</cite>
       </div>
-      <div class="testimonial">
+      <div class="testimonial" style="margin-bottom:16px;"> 
         <blockquote>
-          <p style="margin:0 0 10px;">“As an administrator, the order form cut so much email back-and-forth with customers, and automatic tracking updates mean less chasing.”</p>
+          <p style="margin:0 0 10px;">“The order form Streamline made us cut so much email back-and-forth with customers, and tracking links now in Sage saves time on searching.”</p>
           <p style="margin:0;">“Issues surface quickly and get fixed fast, so I spend more time helping customers and less on data entry.”</p>
         </blockquote>
-        <cite>Sarah, Customer Operations Administrator</cite>
+        <cite>Katerina, Office Manager</cite>
+      </div>
+      <div class="testimonial" style="margin-bottom:16px;">
+        <blockquote>
+          <p style="margin:0 0 10px;">"Having all of the deliveries I'm expecting on Stream really helped with keeping track of what to expect and when.”</p>
+          <p style="margin:0;">"All I have to do is take pictures of the delivery. Everything is sorted on Stream and updates the office and Sage automatically.”</p>
+        </blockquote>
+        <cite>Flavio, Warehouse Manager</cite>
       </div>
     </section>
 
@@ -245,7 +256,16 @@
   </main>
 
   <footer>
-    &copy; 2025 Streamlined Integrations Ltd. All rights reserved.
+    <div class="footer-inner">
+      <div>Contact: <a href="mailto:matthew.n.77@gmail.com">matthew.n.77@gmail.com</a> · <a href="tel:+447868258209">+44 7868 258 209</a></div>
+      <div class="footer-links">
+        <a href="landing.html#top">Home</a>
+        <a href="stream_order_creation.html">Order Creation</a>
+        <a href="single_stock_location.html">Stock Package</a>
+        <a href="landing.html#contact">Contact</a>
+      </div>
+      <div>&copy; 2025 Streamlined Integrations Ltd. All rights reserved.</div>
+    </div>
   </footer>
 </body>
 </html>

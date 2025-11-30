@@ -25,7 +25,11 @@
     .cta{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap;}
     .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border-radius:14px;border:none;font-weight:700;cursor:pointer;text-decoration:none;}
     .btn-primary{background:linear-gradient(135deg,var(--sage),var(--stream));color:white;box-shadow:var(--shadow);} .btn-secondary{background:white;color:var(--ink);border:1px solid rgba(15,23,42,0.12);} 
-    footer{max-width:var(--max-width);margin:0 auto;padding:24px;color:#334155;font-size:14px;text-align:center;}
+    footer{background:#0b1b2b;color:#e2e8f0;padding:28px 24px;margin-top:32px;}
+    footer a{color:#e2e8f0;text-decoration:none;}
+    footer a:hover{text-decoration:underline;}
+    .footer-inner{max-width:var(--max-width);margin:0 auto;display:grid;gap:12px;text-align:left;}
+    .footer-links{display:flex;flex-direction:column;gap:8px;align-items:flex-start;}
   </style>
 </head>
 <body>
@@ -82,13 +86,19 @@
       <a class="btn btn-primary" href="landing.html#contact">Request a demo</a>
       <a class="btn btn-secondary" href="single_stock_location.html">See stock package</a>
     </div>
-
-    <h2 id="contact">Next steps</h2>
-    <p>Email: <a href="mailto:matthew.n.77@gmail.com">matthew.n.77@gmail.com</a> &middot; Phone: <a href="tel:+447868258209">+44 7868 258 209</a></p>
   </main>
 
   <footer>
-    &copy; 2025 Streamlined Integrations Ltd.
+    <div class="footer-inner">
+      <div>Contact: <a href="mailto:matthew.n.77@gmail.com">matthew.n.77@gmail.com</a> · <a href="tel:+447868258209">+44 7868 258 209</a></div>
+      <div class="footer-links">
+        <a href="landing.html#top">Home</a>
+        <a href="stream_order_creation.html">Order Creation</a>
+        <a href="single_stock_location.html">Stock Package</a>
+        <a href="landing.html#contact">Contact</a>
+      </div>
+      <div>&copy; 2025 Streamlined Integrations Ltd.</div>
+    </div>
   </footer>
 </body>
 </html>
